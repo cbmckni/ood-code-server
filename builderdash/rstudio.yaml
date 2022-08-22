@@ -1,0 +1,8 @@
+- codeserver:
+  - filetransfer:
+      codeserver:
+        - codeserver.sh
+        - /tmp
+        - true
+  - commands:
+    - sh /tmp/codeserver.sh

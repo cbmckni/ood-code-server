@@ -1,0 +1,20 @@
+---
+batch_connect:
+  template: "basic"
+script:
+  native:
+    - "-tl"
+    - "<%= "00:%02d:00" % hours %>"
+    - "-gcpit"
+    - "<%= instance_type %>"
+    - "-ni"
+    - "<%= num_instances  %>"
+<% if gpu_type != "None" %>
+    - "-gcpgpu"
+    - "-gcpgpusp"
+    - "<%= num_gpus %>:<%= gpu_type %>"
+<% end %>
+<% if custom_image_id != "" %>
+    - "-gcpgi"
+    - "<%= custom_image_id %>"
+<% end %>

@@ -1,0 +1,12 @@
+#port=$(find_port ${host})
+port=8788
+
+# Define a password and export it for RStudio authentication
+password="$(create_passwd 16)"
+
+# rstudio 1.4+ needs a csrf token
+csrf_token=<%= SecureRandom.uuid %>
+
+#export RSTUDIO_PASSWORD="${password}"
+#echo "www-port=${port}" >> /etc/rstudio/rserver.conf
+

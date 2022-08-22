@@ -1,0 +1,11 @@
+---
+name: code-server
+category: Interactive Apps
+subcategory: Servers
+role: batch_connect
+description: |
+  This app will launch [code-server], an instance of [Visual Studio Code], on [CloudyCluster].
+
+  [code-server]: https://coder.com/docs/code-server/latest
+  [Visual Studio Code]: https://code.visualstudio.com/
+  [CloudyCluster]: http://gcp.cloudycluster.com/
