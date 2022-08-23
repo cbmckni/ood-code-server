@@ -7,10 +7,11 @@ echo "$(date): Started code-server"
 echo ""
 
 code-server \
+    --config="/mnt/orangefs/ccqadmin/codeserver-config.yaml"
     --auth="password" \
     --bind-addr="0.0.0.0:${port}" \
     --disable-telemetry \
     --log debug \
-    "$HOME"
+    "/mnt/orangefs/ccqadmin"
 
 sleep infinity
