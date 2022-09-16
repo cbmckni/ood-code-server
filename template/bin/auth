@@ -8,8 +8,8 @@ fi
 USERNAME="${1}"
 
 # Confirm password environment variable exists
-if [[ -z ${RSTUDIO_PASSWORD} ]]; then
-  echo "The environment variable RSTUDIO_PASSWORD is not set"
+if [[ -z ${CODESERVERPASSWORD} ]]; then
+  echo "The environment variable CODESERVER_PASSWORD is not set"
   exit 1
 fi
 
@@ -17,7 +17,7 @@ fi
 read -s -p "Password: " PASSWORD
 echo ""
 
-if [[ ${USERNAME} == ${USER} && ${PASSWORD} == ${RSTUDIO_PASSWORD} ]]; then
+if [[ ${USERNAME} == ${USER} && ${PASSWORD} == ${CODESERVER_PASSWORD} ]]; then
   echo "Successful authentication"
   exit 0
 else

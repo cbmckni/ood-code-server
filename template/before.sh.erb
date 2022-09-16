@@ -14,7 +14,7 @@ csrf_token=<%= SecureRandom.uuid %>
 cat <<EOF >> /mnt/orangefs/ccqadmin/codeserver-config.yaml
 bind-addr: 0.0.0.0:8788
 auth: password
-password: $password
+password: password
 cert: false
 EOF
 
