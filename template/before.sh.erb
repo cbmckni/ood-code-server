@@ -2,7 +2,7 @@
 port=8788
 
 # Define a password and export it for RStudio authentication
-password="$(create_passwd 16)"
+password="password"
 
 # rstudio 1.4+ needs a csrf token
 csrf_token=<%= SecureRandom.uuid %>
@@ -14,7 +14,7 @@ csrf_token=<%= SecureRandom.uuid %>
 cat <<EOF >> /mnt/orangefs/ccqadmin/codeserver-config.yaml
 bind-addr: 0.0.0.0:8788
 auth: password
-password: password
+password: $password
 cert: false
 EOF
 
