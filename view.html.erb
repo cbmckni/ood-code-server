@@ -18,7 +18,7 @@
     We have to use "key" as the cookie name since upstream in cdr/code-server
     the authentication cookie is hard coded "key"
   */
-  let cookie = `key=<%= cookieValue %>;${expires};secure`;
+  let cookie = `key=<%= cookieValue %>;${expires};${cookiePath};secure`;
   document.cookie = cookie;
 })();
 </script>
